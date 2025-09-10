@@ -1,39 +1,44 @@
-// FUNÇÃO ANÔNIMA
-// function (n1, n2){
-// return n1 + n2
-//}
-const soma = function (n1, n2) {
-  return n1 + n2;
-};
-document.write(`<p>O resultado da soma é ${soma(8, 7)}.</p>`)
-const tipo = typeof(soma)
-document.write(`${tipo}`)
+// LISTA DE EXERCÍCIOS - 13/08/2025
+// O DESAFIO DA CALCULADORA UNIVERSAL
 
-//ARROW FUNCTION (função anônima)
-const dobro = (x) => {
-  return x * 2;
-};
-document.write(`<p>O dobro do número é ${dobro(900)}.</p>`)
-
-//ARROW FUNCTION (função anônima) com mais de um parêmetro
-const calc = (num1, operador, num2) => {
-  return eval(`${num1} ${operador} ${num2}`);
-};
-// eval no Javascript é uma função nativa que realiza cálculos a partir de dois números e um operador.
-document.write(`<p>O resultado da operação é ${calc(1100,"-", 1)}.</p>`)
-
-//SIMPLIFICANDO ARROW FUNCTION com um único retorno
-const calculadora = (num1, operador, num2) =>
-  eval(`${num1} ${operador} ${num2}`);
-document.write(`<p>O resultado da operação é ${calculadora(1100,"+", 1)}.</p>`)
-
-// IIFE - Função Imediata (Immediately Invoked Functions Expression)
-const iife = (function() {
-  document.write("<p>Estou sendo executada imediatamente!</p>")
-})();
-
-//iife com parâmetro
-const loadUser = (function (user){
-  document.write(`<p>Carregando as informações do usuário: <strong> ${user}</strong>...</p>`
+//Tarefa 1 - Saudação Personalizada
+const saudacaoPersonalizada = (function (nome1){
+  document.write(`<p><strong>Tarefa 1 </strong> </p> `);
+  document.write(`<p>Olá, <strong> ${nome1}</strong>! Bem-vindo(a) à Calculadora Universal!</p> `
   );
 })("Ricardo")
+
+//Tarefa 2 - Operação Matemática
+const operacaoMatematica = (numer1, operador2, numer2) => {
+  return eval(`${numer1} ${operador2} ${numer2}`);
+};
+let numer1 = prompt("Digite o primeiro número");
+let operador2 = prompt("Digite a operação");
+let numer2 = prompt("Digite o segundo número");
+document.write(`<p><strong>Tarefa 2 </strong> </p> `);
+document.write(`<p>O resultado de (${numer1} ${operador2} ${numer2}) é igual a ${operacaoMatematica(numer1,operador2, numer2)}.</p>`
+);
+
+//tarefa 3 - ARROW FUNCTION (função anônima)
+let x = prompt("Digite o número a dobrar");
+const calculaDobro = (x) => {
+  return x * 2;
+};
+document.write(`<p><strong>Tarefa 3 </strong> </p> `);
+document.write(`<p>O dobro de ${x} é ${calculaDobro(x)}.</p>`)
+
+//tarefa 4 - ARROW FUNCTION
+let y = prompt("Digite o número a diidir");
+const calcularMetade = (y) => {
+  return y / 2;
+};
+document.write(`<p><strong>Tarefa 4 </strong> </p> `);
+document.write(`<p>A metade de ${y} é ${calcularMetade(y)}.</p>`)
+
+
+// tarefa 5 -IIFE - Função Imediata (Immediately Invoked Functions Expression)
+const iife = (function() {
+  document.write(`<p><strong>Tarefa 5 </strong> </p> `);
+  document.write("<p>Calculadora Universal pronta para uso!</p>")
+})();
+
