@@ -28,7 +28,7 @@ document.write(`<p><strong>Tarefa 3 </strong> </p> `);
 document.write(`<p>O dobro de ${x} é ${calculaDobro(x)}.</p>`)
 
 //tarefa 4 - ARROW FUNCTION
-let y = prompt("Digite o número a diidir");
+let y = prompt("Digite o número a dividir");
 const calcularMetade = (y) => {
   return y / 2;
 };

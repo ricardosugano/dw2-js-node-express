@@ -13,12 +13,8 @@ listaClientes.forEach(nome => {
         Marca: ${produto.marca} <br>
         Preco: ${produto.preco} <br>
         Descrição: ${produto.nome} <br><br>
-
         `)
 }
-
-    
-    
     acelerar() {
         return " Acelerando...";
     },
